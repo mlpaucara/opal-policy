@@ -20,7 +20,7 @@
 package app.rbac
 
 import rego.v1
-import data.apidata
+import data.apidata as apidata
 
 # import data.utils
 
@@ -30,7 +30,7 @@ default allow = false
 # Allow admins to do anything
 allow if {
 	#user_is_admin
-	print(data.apiv1.json)
+	print(apidata.apiv1.json)
 	true
 }
 
